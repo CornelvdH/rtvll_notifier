@@ -1,7 +1,13 @@
 <?php
-$fileName = "locations/data/" . $_POST['device_id'] . '.txt';
-$fp = fopen($fileName, "w+");
 
-$json_string = json_encode($_POST, JSON_PRETTY_PRINT);
+if(isset($_POST['device_id']) && !empty($_POST['device_id'])){
+	
+	$fileName = "locations/data/" . $_POST['device_id'] . '.txt';
+	$jsonString = json_encode($_POST, JSON_PRETTY_PRINT);
 
-fwrite($fp, $json_string);
+	$result = file_put_contents($fileName, $jsonString);
+	if($result === false){
+		error_log('Writing data from ' . $_POST['device_id'] . ' failed.');
+	}
+}
+
