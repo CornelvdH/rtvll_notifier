@@ -1,0 +1,14 @@
+{
+    "number": "202",
+    "type": "live",
+    "device_name": "Patrick",
+    "last_modified": "Fri Apr 28 2017 19:58:25 GMT+0200 (CEST)",
+    "device_id": "a46129cbb29e939a",
+    "latitude": "51.9991923",
+    "longitude": "4.4571104",
+    "altitude": "35.84578355144051",
+    "accuracy": "6",
+    "altitudeAccuracy": "",
+    "heading": "257",
+    "speed": "0"
+}

@@ -1,0 +1,33 @@
+#map {
+	height: 100%;
+}
+html, body, .container {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	/*display:table;*/
+	width: 100%;
+	/*margin-top: -50px;*/
+	padding: 0; /*set left/right padding according to needs*/
+	box-sizing: border-box;
+}
+
+.row {
+	height: 100%;
+	/*display: table-row;*/
+}
+
+.col-md-3 {
+	margin-left: 10px;
+    margin-right: -10px;
+    height: 100%;
+    overflow: scroll;
+}
+
+.no-padding {
+	padding: 0;
+	height: 100%;
+}

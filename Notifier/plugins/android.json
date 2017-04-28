@@ -1,0 +1,34 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-cocoalumberjack": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "nl.rtvlansingerland.app"
+        }
+    }
+}

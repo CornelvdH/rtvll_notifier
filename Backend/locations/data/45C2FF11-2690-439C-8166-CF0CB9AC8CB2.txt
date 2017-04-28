@@ -1,0 +1,14 @@
+{
+    "latitude": "51.87228825413796",
+    "longitude": "4.523119870577495",
+    "accuracy": "5",
+    "altitude": "8.22817611694336",
+    "heading": "NaN",
+    "speed": "0",
+    "altitudeAccuracy": "3",
+    "number": "36",
+    "type": "live",
+    "last_modified": "28-4-2017 22:13:19",
+    "device_id": "45C2FF11-2690-439C-8166-CF0CB9AC8CB2",
+    "device_name": "Cornel"
+}

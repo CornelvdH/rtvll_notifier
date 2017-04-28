@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags-->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
+
+	<!-- Required meta tags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- Color theme for statusbar -->
+	<meta name="theme-color" content="#2196f3">
+	<!-- Your app title -->
+	<title>My App</title>
+	<!-- Path to Framework7 Library CSS, Material Theme -->
+	
+	<link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+	<link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<!-- Views -->
+	<div class="views">
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+			<div class="pages navbar-fixed toolbar-fixed">
+				<!-- Page, "data-page" contains page name -->
+				<div data-page="index" class="page">
+					
+					<!-- Top Navbar. In Material theme it should be inside of the page-->
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="center">RTV-LL Notifier</div>
+						</div>
+					</div>
+					
+					<!-- Toolbar. In Material theme it should be inside of the page-->
+					<div class="toolbar">
+						<div class="toolbar-inner">
+							<!-- Toolbar links -->
+							<a href="map.html" class="link">Locatie</a>
+							<a href="device-name.html" class="link">Naam instellen</a>
+							<a href="callsheet.html" class="link">Contact</a>
+						</div>
+					</div>
+					
+					<!-- Scrollable page content -->
+					<div class="page-content">
+						<div class="content-block">
+							<p><strong>Welkom bij de RTV Lansingerland Notifier app. </strong>Deze app dient als een cheatsheet met daarop de belangrijkste contacten, je locatie en wat andere items.</p>
+							<p>Om te zorgen dat de studio-medewerkers een goed beeld hebben van je locatie, moet je deze app <strong>minimaal elke 15 minuten of bij het eerstvolgende contactmoment</strong> inschakelen om je locatie door te geven.</p>
+							<p><a href="device-name.html" class="button">Naam instellen</a></p>
+							<p><a href="map.html" class="button">Locatie-info</a></p>
+							<p><a href="callsheet.html" class="button">Contact-info</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiAkLCM8AhwKaDXVMlLRr_yK075cK8yUw"></script>
+    <script type="text/javascript" src="js/messages.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html> 
