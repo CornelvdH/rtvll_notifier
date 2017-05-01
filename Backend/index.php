@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <!-- Latest compiled and minified CSS -->
       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="resources/bootswatch-paper.min.css">
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,16 +22,36 @@
                         <p>Op dit scherm zie je de belangrijkste info over de RopaRun binnenkomen. </p>
 
                         <hr>
-                        <h4>RTV-LL Locaties</h4>
-                        <p>Locaties die hieronder getoond worden zijn gekoppeld aan een reporter van RTV Lansingerland.</p>
+                        <h4>
+                        <span class="icon-container" data-items="location">
+                              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                              RTV-LL Locaties
+                        </span><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"></h4>
+                        <p>Locaties die hier getoond worden zijn gekoppeld aan een reporter van RTV Lansingerland.</p>
                         <div class="location-info list-group">
                         </div>
 
                         <hr>
-                        <h4>RopaRun Teams</h4>
+                        <h4>
+                        <span class="icon-container" data-items="doorkomst">
+                              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                              Doorkomsten
+                        </span><img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"></h4>
+                        <p>Doorkomsten die hier getoond worden zijn gekoppeld aan een doorkomst van de Roparun-organisatie.</p>
+                        <div class="doorkomst-info list-group">
+                        </div>
+
+                        <hr>
+                        <h4>
+                        <span class="icon-container" data-items="team">
+                              <i class="fa fa-plus-square" aria-hidden="true"></i>
+                              RopaRun Teams
+                        </span><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"></h4>
                         <p>De teams hieronder zijn gefilterd op de teams die wij volgen.</p>
                         <div class="team-info list-group">
                         </div>
+
+
                   </div>
                   <div class="col-md-9 no-float no-padding">
                         <div id="map"></div>

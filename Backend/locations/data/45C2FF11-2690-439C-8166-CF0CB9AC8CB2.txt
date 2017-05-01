@@ -1,14 +1,14 @@
 {
-    "latitude": "51.87221700796101",
-    "longitude": "4.522796161477009",
-    "accuracy": "10",
-    "altitude": "22.43551254272461",
-    "heading": "NaN",
-    "speed": "0",
-    "altitudeAccuracy": "8",
-    "number": "46",
+    "latitude": "51.91681893252856",
+    "longitude": "4.53181287609227",
+    "accuracy": "200",
+    "altitude": "3.758418083190918",
+    "heading": "-1",
+    "speed": "0.3777626225865786",
+    "altitudeAccuracy": "10",
+    "number": "107",
     "type": "live",
-    "last_modified": "28-4-2017 22:29:43",
+    "last_modified": "1-5-2017 14:25:14",
     "device_id": "45C2FF11-2690-439C-8166-CF0CB9AC8CB2",
     "device_name": "Cornel"
 }

@@ -1,14 +1,14 @@
 {
-    "number": "29",
+    "number": "5",
     "type": "live",
     "device_name": "Stan",
-    "last_modified": "Fri Apr 28 2017 19:59:03 GMT+0200 (CEST)",
+    "last_modified": "Sun Apr 30 2017 14:11:15 GMT+0200 (CEST)",
     "device_id": "8b19433961cd6a8f",
-    "latitude": "51.9854101",
-    "longitude": "4.4996932",
-    "altitude": "29.08816560327955",
-    "accuracy": "24",
+    "latitude": "51.5868865",
+    "longitude": "3.7215198",
+    "altitude": "",
+    "accuracy": "10.71500015258789",
     "altitudeAccuracy": "",
     "heading": "",
-    "speed": "0"
+    "speed": ""
 }

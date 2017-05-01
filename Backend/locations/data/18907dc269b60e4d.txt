@@ -1,0 +1,14 @@
+{
+    "number": "13",
+    "type": "live",
+    "device_name": "Nathalie",
+    "last_modified": "Mon May 01 2017 12:52:14 GMT+0200 (CEST)",
+    "device_id": "18907dc269b60e4d",
+    "latitude": "51.9209894",
+    "longitude": "4.5414304",
+    "altitude": "",
+    "accuracy": "10",
+    "altitudeAccuracy": "",
+    "heading": "",
+    "speed": ""
+}

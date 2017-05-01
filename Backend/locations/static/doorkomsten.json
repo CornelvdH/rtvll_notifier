@@ -1,0 +1,152 @@
+[
+	{
+		"id": 0,
+		"name": "Start Parijs",
+		"lat": "48.947851",
+		"lng": "2.419432"
+	},
+	{
+		"id": 1,
+		"name": "Doorkomst Busigny ",
+		"lat": "50.035604",
+		"lng": "3.466744"
+	},
+	{
+		"id": 2,
+		"name": "Doorkomst Bertry",
+		"lat": "50.088623",
+		"lng": "3.447954"
+	},
+	{
+		"id": 3,
+		"name": "Doorkomst Troisvilles",
+		"lat": "50.110260",
+		"lng": "3.470526"
+	},
+	{
+		"id": 4,
+		"name": "Doorkomst Asse",
+		"lat": "50.910813",
+		"lng": "4.194204"
+	},
+	{
+		"id": 5,
+		"name": "Doorkomst Opwijk",
+		"lat": "50.966359",
+		"lng": "4.189786"
+	},
+	{
+		"id": 6,
+		"name": "Doorkomst Wiesbeek",
+		"lat": "50.989940",
+		"lng": "4.170811"
+	},
+	{
+		"id": 7,
+		"name": "Doorkomst Jules andriespark",
+		"lat": "50.994450",
+		"lng": "4.178764"
+	},
+	{
+		"id": 8,
+		"name": "Doorkomst Opstal / buggenhout",
+		"lat": "50.997327",
+		"lng": "4.176960"
+	},
+	{
+		"id": 9,
+		"name": "Doorkomst Dendermonde",
+		"lat": "51.027433",
+		"lng": "4.100033"
+	},
+	{
+		"id": 10,
+		"name": "Doorkomst Zele",
+		"lat": "51.068717",
+		"lng": "4.039580"
+	},
+	{
+		"id": 11,
+		"name": "Doorkomst Putte",
+		"lat": "51.355963",
+		"lng": "4.394609"
+	},
+	{
+		"id": 12,
+		"name": "Doorkomst Ossendrecht",
+		"lat": "51.395550",
+		"lng": "4.328210"
+	},
+	{
+		"id": 13,
+		"name": "Doorkomst Hoogerheide",
+		"lat": "51.425817",
+		"lng": "4.322377"
+	},
+	{
+		"id": 14,
+		"name": "Doorkomst Bergen op zoom",
+		"lat": "51.494316",
+		"lng": "4.287536"
+	},
+	{
+		"id": 15,
+		"name": "Doorkomst Kladde",
+		"lat": "51.560256",
+		"lng": "4.264239"
+	},
+	{
+		"id": 16,
+		"name": "Doorkomst Dinteloord",
+		"lat": "51.635507",
+		"lng": "4.370096"
+	},
+	{
+		"id": 17,
+		"name": "Doorkomst Willemstad",
+		"lat": "51.693721",
+		"lng": "4.441088"
+	},
+	{
+		"id": 18,
+		"name": "Doorkomst Numansdorp",
+		"lat": "51.743230",
+		"lng": "4.440456"
+	},
+	{
+		"id": 19,
+		"name": "Doorkomst Klaaswaal",
+		"lat": "51.769265",
+		"lng": "4.445113"
+	},
+	{
+		"id": 20,
+		"name": "Doorkomst Oud-beijerland",
+		"lat": "51.824970",
+		"lng": "4.420552"
+	},
+	{
+		"id": 21,
+		"name": "Doorkomst Heinenoord",
+		"lat": "51.819496",
+		"lng": "4.479696"
+	},
+	{
+		"id": 22,
+		"name": "Doorkomst Heinenoordtunnel",
+		"lat": "51.827209",
+		"lng": "4.508867"
+	},
+	{
+		"id": 23,
+		"name": "Doorkomst Barendrecht",
+		"lat": "51.856265",
+		"lng": "4.539142"
+	},
+	{
+		"id": 24,
+		"name": "Doorkomst Daniel den hoed",
+		"lat": "51.885815",
+		"lng": "4.506183"
+	}
+]

@@ -2,9 +2,11 @@ var map;
 var markers = {};
 
 var teams = {};
+var doorkomsten = {};
 
 var infoWindows = {};
 var teamInfoWindows = {};
+var doorkomstInfoWindows = {};
 
 function parseMessageBundle(message, bundle){
 	for(var b in bundle){
@@ -33,7 +35,8 @@ function getTeamData(){
 					position: latLng,
 					map: map,
 					title: current.name,
-					icon: 'http://app.rtvlansingerland.nl/resources/team.png'
+					icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+					id: current.id
 				});
 			}
 
@@ -48,13 +51,57 @@ function getTeamData(){
 				}); 
 
 				teams[current.id].addListener('click', function() {
-					teamInfoWindows[current.id].open(map, teams[current.id]);
+				 	teamInfoWindows[this.id].open(map, teams[this.id]);
 				});
 			}
 
 			var windowContent = parseMessageBundle(messages.teams.window, current);
 
 			$(".team-info").append(windowContent);
+			setHandlers();
+		}
+	});
+}
+
+function getDoorkomsten(){
+	$.get("locations/static/doorkomsten.json", function(data){
+		
+		$(".doorkomst-info").empty();
+
+		for(var d in data){
+			var current = data[d];
+			var latLng = new google.maps.LatLng(current.lat, current.lng);
+
+			if(current.id in doorkomsten){
+				doorkomsten[current.id].setPosition(latLng);
+			} else {
+				doorkomsten[current.id] = new google.maps.Marker({
+					position: latLng,
+					map: map,
+					title: current.name,
+					icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+					id: current.id
+				});
+			}
+
+			var content = parseMessageBundle(messages.doorkomsten.popup, current);
+
+			if(current.id in doorkomstInfoWindows){
+				doorkomstInfoWindows[current.id].setPosition(latLng);
+				doorkomstInfoWindows[current.id].setContent(content);
+			} else {
+				doorkomstInfoWindows[current.id] = new google.maps.InfoWindow({
+					content: content
+				}); 
+
+				doorkomsten[current.id].addListener('click', function() {
+					doorkomstInfoWindows[this.id].open(map, doorkomsten[this.id]);
+				});
+			}
+
+			var windowContent = parseMessageBundle(messages.doorkomsten.window, current);
+
+			$(".doorkomst-info").append(windowContent);
 			setHandlers();
 		}
 	});
@@ -77,7 +124,8 @@ function getLocations(){
 					position: latLng,
 					map: map,
 					title: current.device_name,
-					icon: 'http://app.rtvlansingerland.nl/resources/mic.png'
+					icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+					id: current.device_id
 				});
 
 			}
@@ -92,6 +140,10 @@ function getLocations(){
 				infoWindows[current.device_id] = new google.maps.InfoWindow({
 					content: content
 				}); 
+
+				markers[current.device_id].addListener('click', function() {
+					infoWindows[this.id].open(map, markers[this.id]);
+				});
 			}
 
 			var windowContent = parseMessageBundle(messages.locations.window, current);
@@ -122,7 +174,7 @@ function getRoute(){
 			var poly = new google.maps.Polyline({
 				// use your own style here
 				path: points,
-				strokeColor: "#FF00AA",
+				strokeColor: "#184275",
 				strokeOpacity: .7,
 				strokeWeight: 4
 			});
@@ -134,8 +186,6 @@ function getRoute(){
 function setHandlers(){
 	$(".location-item").click(function(e){
 		var uuid = $(this).data("uuid");
-		console.log(uuid);
-
 		infoWindows[uuid].open(map, markers[uuid]);
 	});
 
@@ -143,17 +193,23 @@ function setHandlers(){
 		var uuid = $(this).data("uuid");
 		teamInfoWindows[uuid].open(map, teams[uuid]);
 	});
+
+	$(".doorkomst-item").click(function(e){
+		var uuid = $(this).data("uuid");
+		doorkomstInfoWindows[uuid].open(map, doorkomsten[uuid]);
+	});
 }
 
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 51.9, lng: 4.5},
-		zoom: 10
+		center: {lat: 51.733225, lng: 4.529246},
+		zoom: 11
 	});
 
 	getLocations();
 	getTeamData();
 	getRoute();
+	getDoorkomsten();
 	setHandlers();
 
 	setInterval(function(){
@@ -163,4 +219,18 @@ function initMap() {
 	setInterval(function(){
 		getTeamData();
 	}, 60000);
+
+	$(".icon-container").click(function(e){
+		var itemContainer = "." + $(this).data("items") + "-info";
+		var iconItem = this;
+		$(itemContainer).slideToggle('slow', function() {
+	        if ($(itemContainer).is(':hidden')){
+	            $(iconItem).find("i").removeClass("fa-minus-square").addClass("fa-plus-square");
+	        } else {
+	            $(iconItem).find("i").removeClass("fa-plus-square").addClass("fa-minus-square");
+	        }
+	    });
+	});
+
+	$(".list-group").slideUp(0);
 }
