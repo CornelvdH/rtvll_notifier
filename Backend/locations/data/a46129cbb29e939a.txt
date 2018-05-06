@@ -1,14 +1,14 @@
 {
-    "number": "202",
+    "number": "7",
     "type": "live",
     "device_name": "Patrick",
-    "last_modified": "Fri Apr 28 2017 19:58:25 GMT+0200 (CEST)",
+    "last_modified": "Thu May 03 2018 15:39:34 GMT+0200 (CEST)",
     "device_id": "a46129cbb29e939a",
-    "latitude": "51.9991923",
-    "longitude": "4.4571104",
-    "altitude": "35.84578355144051",
-    "accuracy": "6",
+    "latitude": "51.9853065",
+    "longitude": "4.4997341",
+    "altitude": "43.70000076293945",
+    "accuracy": "11.505000114440918",
     "altitudeAccuracy": "",
-    "heading": "257",
-    "speed": "0"
+    "heading": "157",
+    "speed": "1.0181294679641724"
 }

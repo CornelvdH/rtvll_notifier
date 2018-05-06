@@ -1,0 +1,14 @@
+{
+    "number": "21",
+    "type": "live",
+    "last_modified": "5\/6\/2018, 4:13:13 PM",
+    "device_id": "6433b06e26335d08",
+    "device_name": "Cornel test",
+    "latitude": "51.87252543",
+    "longitude": "4.522951924",
+    "altitude": "56.84369278",
+    "accuracy": "12",
+    "altitudeAccuracy": "",
+    "heading": "230.4954071044922",
+    "speed": "0"
+}

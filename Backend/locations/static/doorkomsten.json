@@ -3,150 +3,280 @@
 		"id": 0,
 		"name": "Start Parijs",
 		"lat": "48.947851",
-		"lng": "2.419432"
+		"lng": "2.419432",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 1,
 		"name": "Doorkomst Busigny ",
 		"lat": "50.035604",
-		"lng": "3.466744"
+		"lng": "3.466744",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 2,
 		"name": "Doorkomst Bertry",
 		"lat": "50.088623",
-		"lng": "3.447954"
+		"lng": "3.447954",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 3,
 		"name": "Doorkomst Troisvilles",
 		"lat": "50.110260",
-		"lng": "3.470526"
+		"lng": "3.470526",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 4,
 		"name": "Doorkomst Asse",
 		"lat": "50.910813",
-		"lng": "4.194204"
+		"lng": "4.194204",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 5,
 		"name": "Doorkomst Opwijk",
 		"lat": "50.966359",
-		"lng": "4.189786"
+		"lng": "4.189786",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 6,
 		"name": "Doorkomst Wiesbeek",
 		"lat": "50.989940",
-		"lng": "4.170811"
+		"lng": "4.170811",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 7,
 		"name": "Doorkomst Jules andriespark",
 		"lat": "50.994450",
-		"lng": "4.178764"
+		"lng": "4.178764",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 8,
 		"name": "Doorkomst Opstal / buggenhout",
 		"lat": "50.997327",
-		"lng": "4.176960"
+		"lng": "4.176960",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 9,
 		"name": "Doorkomst Dendermonde",
 		"lat": "51.027433",
-		"lng": "4.100033"
+		"lng": "4.100033",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 10,
 		"name": "Doorkomst Zele",
 		"lat": "51.068717",
-		"lng": "4.039580"
+		"lng": "4.039580",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 11,
 		"name": "Doorkomst Putte",
 		"lat": "51.355963",
-		"lng": "4.394609"
+		"lng": "4.394609",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 12,
 		"name": "Doorkomst Ossendrecht",
 		"lat": "51.395550",
-		"lng": "4.328210"
+		"lng": "4.328210",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 13,
 		"name": "Doorkomst Hoogerheide",
 		"lat": "51.425817",
-		"lng": "4.322377"
+		"lng": "4.322377",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 14,
 		"name": "Doorkomst Bergen op zoom",
 		"lat": "51.494316",
-		"lng": "4.287536"
+		"lng": "4.287536",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 15,
 		"name": "Doorkomst Kladde",
 		"lat": "51.560256",
-		"lng": "4.264239"
+		"lng": "4.264239",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 16,
 		"name": "Doorkomst Dinteloord",
 		"lat": "51.635507",
-		"lng": "4.370096"
+		"lng": "4.370096",
+		"time": "05-06-2017 07:00 - 05-06-2017 08:00",
+		"color": "yellow"
 	},
 	{
 		"id": 17,
 		"name": "Doorkomst Willemstad",
 		"lat": "51.693721",
-		"lng": "4.441088"
+		"lng": "4.441088",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 18,
 		"name": "Doorkomst Numansdorp",
 		"lat": "51.743230",
-		"lng": "4.440456"
+		"lng": "4.440456",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 19,
 		"name": "Doorkomst Klaaswaal",
 		"lat": "51.769265",
-		"lng": "4.445113"
+		"lng": "4.445113",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 20,
 		"name": "Doorkomst Oud-beijerland",
 		"lat": "51.824970",
-		"lng": "4.420552"
+		"lng": "4.420552",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 21,
 		"name": "Doorkomst Heinenoord",
 		"lat": "51.819496",
-		"lng": "4.479696"
+		"lng": "4.479696",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 22,
 		"name": "Doorkomst Heinenoordtunnel",
 		"lat": "51.827209",
-		"lng": "4.508867"
+		"lng": "4.508867",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 23,
 		"name": "Doorkomst Barendrecht",
 		"lat": "51.856265",
-		"lng": "4.539142"
+		"lng": "4.539142",
+		"time": "Onbekend",
+		"color": "yellow"
 	},
 	{
 		"id": 24,
 		"name": "Doorkomst Daniel den hoed",
 		"lat": "51.885815",
-		"lng": "4.506183"
+		"lng": "4.506183",
+		"time": "Onbekend",
+		"color": "yellow"
+	},
+	{
+		"id": 25,
+		"name": "Wisselpunt Nery",
+		"lat": "49.281484",
+		"lng": "2.777440",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 26,
+		"name": "Wisselpunt Fretoy-le-chateau",
+		"lat": "49.660535",
+		"lng": "2.975274",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 27,
+		"name": "Wisselpunt Levergies",
+		"lat": "49.928616",
+		"lng": "3.311979",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 28,
+		"name": "Wisselpunt Beaudignies",
+		"lat": "50.236392",
+		"lng": "3.590896",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 29,
+		"name": "Wisselpunt Neufmaison",
+		"lat": "50.529238",
+		"lng": "3.793695",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 30,
+		"name": "Wisselpunt Wambeek-Ternat",
+		"lat": "50.853431",
+		"lng": "4.162449",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 31,
+		"name": "Wisselpunt Sint-Anna",
+		"lat": "51.094944",
+		"lng": "4.072483",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 32,
+		"name": "Wisselpunt Putte",
+		"lat": "51.367263",
+		"lng": "4.388645",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 33,
+		"name": "Wisselpunt Dinteloord",
+		"lat": "51.628950",
+		"lng": "4.363568",
+		"time": "Onbekend",
+		"color": "purple"
+	},
+	{
+		"id": 34,
+		"name": "Wisselpunt Slinge",
+		"lat": "51.878919",
+		"lng": "4.508524",
+		"time": "Onbekend",
+		"color": "purple"
 	}
 ]

@@ -1,0 +1,20 @@
+#absence {
+	background-color: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+#absence img {
+	margin: 0 auto;
+}
+
+#color {
+	background-color: blue;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}

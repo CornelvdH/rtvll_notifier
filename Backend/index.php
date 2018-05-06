@@ -9,6 +9,8 @@
       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="resources/bootswatch-paper.min.css">
+	  <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -30,6 +32,17 @@
                         <p>Locaties die hier getoond worden zijn gekoppeld aan een reporter van RTV Lansingerland.</p>
                         <div class="location-info list-group">
                         </div>
+
+			<hr>
+                        <h4>
+                        <span class="icon-container" data-items="video">
+                              <i class="fa fa-plus-square" aria-hidden="true"></i>
+			      Video's onderweg
+                        </span><img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"></h4>
+                        <p>Onze reporters uploaden video's. Kijk in deze lijst om te zien wat er op de route gebeurt.</p>
+                        <div class="video-info list-group">
+                        </div>
+
 
                         <hr>
                         <h4>
@@ -58,8 +71,10 @@
                   </div>
             </div>
       </div>
+
       <script src="resources/messages.js"></script>
       <script src="resources/maps.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiAkLCM8AhwKaDXVMlLRr_yK075cK8yUw&callback=initMap" async defer></script>
+      <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
 </body>
 </html>

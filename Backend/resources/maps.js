@@ -1,6 +1,8 @@
 var map;
 var markers = {};
 
+var key = "AIzaSyAiAkLCM8AhwKaDXVMlLRr";
+
 var teams = {};
 var doorkomsten = {};
 
@@ -79,11 +81,10 @@ function getDoorkomsten(){
 					position: latLng,
 					map: map,
 					title: current.name,
-					icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+					icon: 'http://maps.google.com/mapfiles/ms/icons/'+current.color+'-dot.png',
 					id: current.id
 				});
 			}
-
 			var content = parseMessageBundle(messages.doorkomsten.popup, current);
 
 			if(current.id in doorkomstInfoWindows){
@@ -149,6 +150,63 @@ function getLocations(){
 			var windowContent = parseMessageBundle(messages.locations.window, current);
 			
 			$(".location-info").append(windowContent);
+
+			if(window.centerItem == current.device_name){
+				map.setCenter(latLng);
+			}
+			setHandlers();
+
+		}
+
+	});
+}
+
+function getVideos(){
+	$.get("locations/getVideo.php", function(data){
+		
+		$(".video-info").empty();
+		
+		for(var d in data){
+			var current = data[d];
+
+			var latLng = new google.maps.LatLng(current.latitude, current.longitude);
+
+			if(current.device_id in markers){
+				markers[current.device_id].setPosition(latLng);
+			} else {
+				markers[current.device_id] = new google.maps.Marker({
+					position: latLng,
+					map: map,
+					title: current.device_name,
+					icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					id: current.device_id
+				});
+
+			}
+			// Fix speed notation.
+			current.speed = Math.round(current.speed * 3.6);
+			var content = parseMessageBundle(messages.videos.popup, current);
+			
+			if(current.device_id in infoWindows){
+				infoWindows[current.device_id].setPosition(latLng);
+				infoWindows[current.device_id].setContent(content);
+			} else {
+				infoWindows[current.device_id] = new google.maps.InfoWindow({
+					content: content
+				}); 
+
+				markers[current.device_id].addListener('click', function() {
+					infoWindows[this.id].open(map, markers[this.id]);
+				});
+			}
+
+			var windowContent = parseMessageBundle(messages.videos.window, current);
+			
+			$(".video-info").append(windowContent);
+
+			if(window.centerItem == current.device_name){
+				map.setCenter(latLng);
+			}
 			setHandlers();
 
 		}
@@ -189,6 +247,12 @@ function setHandlers(){
 		infoWindows[uuid].open(map, markers[uuid]);
 	});
 
+	$(".video-item").click(function(e){
+		var uuid = $(this).data("uuid");
+		infoWindows[uuid].open(map, markers[uuid]);
+	});
+
+
 	$(".team-item").click(function(e){
 		var uuid = $(this).data("uuid");
 		teamInfoWindows[uuid].open(map, teams[uuid]);
@@ -198,15 +262,24 @@ function setHandlers(){
 		var uuid = $(this).data("uuid");
 		doorkomstInfoWindows[uuid].open(map, doorkomsten[uuid]);
 	});
+
+	
 }
 
 function initMap() {
+	
+	var zoom = 11;
+	if(window.zoomLevel){
+		zoom = window.zoomLevel;
+	}
+
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 51.733225, lng: 4.529246},
-		zoom: 11
+		zoom: zoom
 	});
 
 	getLocations();
+	getVideos();
 	getTeamData();
 	getRoute();
 	getDoorkomsten();

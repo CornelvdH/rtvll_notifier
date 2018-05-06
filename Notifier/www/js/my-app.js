@@ -51,7 +51,7 @@ function createMap(){
                var p = new google.maps.LatLng(lat, lon);
                points.push(p);
                bounds.extend(p);
-            });
+           });
             var poly = new google.maps.Polyline({
                 path: points,
                 strokeColor: "#FF00AA",
@@ -68,7 +68,7 @@ function createMap(){
 }
 
 function createPostObject(item){
-    
+
     item.number = i;
     item.type = "live";
     i++;
@@ -138,9 +138,85 @@ myApp.onPageInit('map', function (page) {
 });
 
 myApp.onPageInit('device-name', function (page) {
-    
+
     $(".device-name-input").val(getDeviceName());
     $(".device-name-input").change(function(e){
         setDeviceName($(this).val());
     });
+});
+
+
+myApp.onPageInit('callsheet', function(page) {
+    var uploader = {};
+
+    uploader.creds = {
+        bucket: 'upload-video-platform',
+        access_key: 'AKIAJFYVFGCEQ7KJEURQ',
+        secret_key: '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'
+    };
+
+    uploader.urlFormat = "https://s3.eu-west-3.amazonaws.com/upload-video-platform/";
+
+    uploader.createVideoEntry = function() {
+ 
+        var url = uploader.urlFormat + encodeURIComponent(uploader.file.name.replace(/ /g,''));
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var item = createPostObject(position.coords);
+            item.type = "video";
+            item.url = url;
+            item.device_id = uploader.file.name;
+            post(item);
+
+        }, function(){
+
+        });
+    };
+
+    uploader.percentage = 0;
+
+    uploader.upload = function() {
+        console.log(uploader.file);
+        // Configure The S3 Object 
+        AWS.config.update({ accessKeyId: uploader.creds.access_key, secretAccessKey: uploader.creds.secret_key });
+        AWS.config.region = 'eu-west-3';
+        var bucket = new AWS.S3({ params: { Bucket: uploader.creds.bucket } });
+
+        if(uploader.file) {
+            var params = { Key: uploader.file.name, ContentType: uploader.file.type, Body: uploader.file };
+
+            bucket.putObject(params, function(err, data) {
+                if(err) {
+                    // There Was An Error With Your S3 Config
+                    alert(err.message);
+                    return false;
+                } else {
+                    uploader.createVideoEntry();
+                }
+            }).on('httpUploadProgress',function(progress) {
+                // Log Progress Information
+                uploader.percentage = Math.round(progress.loaded / progress.total * 100);
+                console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
+            });
+        }
+        else {
+            // No File Selected
+            alert('No File Selected');
+        }
+    }
+
+    $("#btn-start-upload").click(function(e){
+        uploader.file = $("input[name='file']").get(0).files[0];
+        uploader.upload();
+    });
+
+    $("#file-1").change(function(e){
+        $(".inputfile label").text("Bestand geselecteerd");
+    });
+
+    setInterval(function(){
+        $(".progress .percent").text(uploader.percentage);
+        if(uploader.percentage == 100){
+            $(".complete").show();
+        }
+    }, 500);
 });
